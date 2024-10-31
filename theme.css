@@ -32,3 +32,87 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+.theme-dark {
+    /* colors */
+    --color-red-rgb: 251, 70, 76;
+    --color-red: #e84855;
+    --color-orange-rgb: 233, 151, 63;
+    --color-orange: #e9973f;
+    --color-yellow-rgb: 224, 222, 113;
+    --color-yellow: #e0de71;
+    --color-green-rgb: 68, 207, 110;
+    --color-green: #23d18c;
+    --color-cyan-rgb: 83, 223, 221;
+    --color-cyan: #0acecb;
+    --color-blue-rgb: 2, 122, 255;
+    --color-blue: #027aff;
+    --color-purple-rgb: 168, 130, 255;
+    --color-purple: #a29bfe;
+    --color-pink-rgb: 250, 153, 205;
+    --color-pink: #fa99cd;
+
+
+    --color-accent-hsl: var(--accent-h),
+        var(--accent-s),
+        var(--accent-l);
+    --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --color-accent-1: #ff0000;
+    --color-accent-2: #ff0000;
+
+	/* Background */
+    --background-primary: #131311;
+    --background-primary-alt: #222220;
+    --background-code: #222220;
+    --background-code-preview: #222220;
+    --background-preview: #131311;
+    /* Editor */
+    --color-base-00: #0d1117;
+    --color-base-05: #212121;
+    --color-base-10: #782b1d52;
+    --color-base-20: #0d1117;
+    --color-base-25: #2a2a2a;
+    --color-base-30: #212121;
+    --color-base-35: #3f3f3f;
+    --color-base-40: #555555;
+    --color-base-50: #e84855;
+    --color-base-60: #999999;
+    --color-base-70: #00cecb;
+    --color-base-100: #ff0000;
+	/* Accent Colors */
+	--color-accent-hsl: var(--accent-h),
+	var(--accent-s),
+	var(--accent-l);
+	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	--color-accent-1: #ff0000;
+	--color-accent-2: #ff0000;
+    /* Selected pane and borders */
+    --background-secondary: #181816;
+    /* File Pane */
+    --background-secondary-alt: #181816;
+    /* App Background */
+    --background-tag: #000000;
+    --background-modifier-cover: rgba(0, 0, 0, 0.8);
+
+    --interactive-normal: #f85c51;
+    --interactive-accent: #f85c51;
+    --interactive-accent-hover: #f85c51;
+    --menu-selection: #222220;
+    /* Menu Selected Item */
+    --menu-selection-text: #cbcccc;
+    /* Menu Selected Item Text */
+    --scrollbar-bg: #222220;
+    --table-line: #e6e6e6;
+    --text-accent: #f85c51;
+    --text-accent-hover: #a83e37;
+    --text-faint: #8e8f92;
+    --text-highlight-bg: #d77600;
+    --text-muted: #928677;
+    --text-normal: #ffebd1;
+    --text-on-accent: #ffebd1;
+    --text-selection: #383834;
+    --text-tag: #64ce7b;
+    --background-quick: #222220;
+    --file-hr: #222220;
+    --leaf-handle: #222220;
+}
