@@ -628,9 +628,6 @@ body {
 	--accent-s: 88%;
 	--accent-l: 66%;
 	/* Backgrounds */
-	--background-primary: var(--color-base-00);
-	--background-primary-alt: var(--color-base-10);
-	--background-secondary: var(--color-base-20);
 	--background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
 	--background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
 	--background-modifier-border: var(--color-base-30);
@@ -645,24 +642,18 @@ body {
 	/* Inputs */
 	--background-modifier-form-field: var(--color-base-00);
 	/* Text */
+	--text-accent-hover: var(--color-accent-2);
 	--text-error: var(--color-red);
 	--text-warning: var(--color-orange);
 	--text-success: var(--color-green);
 	--text-highlight-bg-rgb: 255, 208, 0;
 	--text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.4);
 	--text-accent: var(--color-accent);
-	--text-accent-hover: var(--color-accent-2);
-	--interactive-normal: var(--color-base-00);
-	--interactive-hover: var(--color-base-10);
-	--interactive-accent-hsl: var(--color-accent-hsl);
-	--interactive-accent: var(--color-accent-1);
-	--interactive-accent-hover: var(--color-accent-2);
   }
 
 .theme-dark {
     /* colors */
 	--color-head: #ffffff
-
     --color-red-rgb: 251, 70, 76;
     --color-red: #e84855;
     --color-orange-rgb: 233, 151, 63;
@@ -682,11 +673,22 @@ body {
 
 	/* Macros */
 	--dark1: #131311;
-	--dark2: #131311;
-	--dark3: #131311;
+	--dark2: #222220;
+	--dark3: #181816;
 
-	/* Background */
-    --background-primary: #131311;
+    /* Editor */
+    --color-base-00: #131311;
+    --color-base-10: #131311;
+    --color-base-20: #181816;
+    --color-base-30: #181816;
+    --color-base-35: #ffebd1;
+    --color-base-40: #555555;
+    --color-base-50: #f85c51;
+    --color-base-60: #a83e37;
+    --color-base-70: #00cecb;
+    --color-base-100: #ff0000;
+
+	--background-primary: #131311;
     --background-primary-alt: #222220;
     --background-code: #222220;
     --background-code-preview: #222220;
@@ -696,39 +698,16 @@ body {
     --background-tag: #000000;
     --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
-    /* Editor */
-    --color-base-00: #0d1117;
-    --color-base-05: #212121;
-    --color-base-10: #782b1d52;
-    --color-base-20: #0d1117;
-    --color-base-25: #2a2a2a;
-    --color-base-30: #212121;
-    --color-base-35: #3f3f3f;
-    --color-base-40: #555555;
-    --color-base-50: #e84855;
-    --color-base-60: #999999;
-    --color-base-70: #00cecb;
-    --color-base-100: #ff0000;
 	/* Accent Colors */
-	--color-accent-hsl: var(--accent-h),
-	var(--accent-s),
-	var(--accent-l);
+	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-	--color-accent-1: #ff0000;
+	--color-accent-1: #f85c51;
 	--color-accent-2: #ff0000;
-    /* Selected pane and borders */
-    --interactive-normal: #f85c51;
-    --interactive-accent: #f85c51;
-    --interactive-accent-hover: #f85c51;
-    --menu-selection: #222220;
-    /* Menu Selected Item */
+	--text-faint: #f85c51;
+	--menu-selection: #222220;
     --menu-selection-text: #cbcccc;
-    /* Menu Selected Item Text */
     --scrollbar-bg: #222220;
     --table-line: #e6e6e6;
-    --text-accent: #f85c51;
-    --text-accent-hover: #a83e37;
-    --text-faint: #f85c51;
     --text-highlight-bg: #d77600;
     --text-muted: #928677;
     --text-normal: #ffebd1;
@@ -738,4 +717,9 @@ body {
     --background-quick: #222220;
     --file-hr: #222220;
     --leaf-handle: #222220;
+
+	--interactive-normal: #f85c51;
+	--interactive-hover: #a83e37;
+    --interactive-accent: #f85c51;
+    --interactive-accent-hover: #a83e37;
 }
