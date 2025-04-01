@@ -718,7 +718,7 @@ body {
     --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
 	/* Accent Colors */
-	--color-head:var(--warm-white);
+	--color-head:var(--color-accent);
 	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 	--menu-selection: var(--dark2);
