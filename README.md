@@ -1,8 +1,7 @@
 # Planetary Theme
 
-A very Dark but still kinda warm theme.
+A sleek, dark AMOLED-friendly theme designed with an emphasis on warmth and seamless compatibility with user-defined accent colors.
 
-NOTE: Uses Google Fonts
+Please note, the theme may not be 100% tested. If you encounter any errors, feel free to contact me!
 
-
-Its not 100% complete, if you encounter any errors please contact me.
+This theme uses IBM Plex Sans as its primary font.
