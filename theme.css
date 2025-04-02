@@ -14,15 +14,16 @@ body {
 }
 
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
+	--radius-s: 2px;
+	--radius-m: 4px;
+	--radius-l: 8px;
 	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+	--tab-radius: 8px 8px 0 0;
+	--tab-radius-active: 8px 8px 0 0;
+	--checkbox-radius: var(--radius-s);
+	--toggle-radius: 18px;
+	--toggle-thumb-radius: 18px;
+	--slider-thumb-radius: 50%;
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
@@ -48,7 +49,21 @@ svg * {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
 
-
+:root table {
+	--table-border-radius: 8px;
+	border-collapse: separate;
+	border-spacing: 0;
+  }
+  /* Add the radius */
+  th:first-child {border-top-left-radius: var(--table-border-radius)}
+  th:last-child {border-top-right-radius: var(--table-border-radius)}
+  tr:last-child td:first-child {border-bottom-left-radius: var(--table-border-radius)}
+  tr:last-child td:last-child {border-bottom-right-radius: var(--table-border-radius)}
+  
+  /* Redo the borders */
+  :root :is(td, th) {
+	border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+  }
 
 body {
 	--font-text-theme: IBM Plex Sans, sans-serif;
@@ -109,9 +124,8 @@ body {
 	--canvas-color-4: var(--color-green-rgb);
 	--canvas-color-5: var(--color-cyan-rgb);
 	--canvas-color-6: var(--color-purple-rgb);
-	--canvas-dot-pattern: var(--dark3);
+	--canvas-dot-pattern: var(--canvas3);
 	/* Checkboxes */
-	--checkbox-radius: var(--radius-s);
 	--checkbox-size: var(--font-text-size);
 	--checkbox-marker-color: var(--background-primary);
 	--checkbox-color: var(--interactive-accent);
@@ -125,8 +139,8 @@ body {
 	--code-white-space: pre-wrap;
 	--code-radius: var(--radius-s);
 	--code-size: var(--font-smaller);
-	--code-background: var(--dark3);
-	--code-normal: var(--warm-light-grey);
+	--code-background: var(--canvas3);
+	--code-normal: var(--canvas-contrast-medium);
 	--code-comment: var(--text-faint);
 	--code-function: var(--color-yellow);
 	--code-important: var(--color-orange);
@@ -198,7 +212,7 @@ body {
 	/* Graphs */
 	--graph-controls-width: 240px;
 	--graph-text: var(--text-normal);
-	--graph-line: var(--warm-white, var(--background-modifier-border-focus));
+	--graph-line: var(--canvas-contrast-high, var(--background-modifier-border-focus));
 	--graph-node: var(--text-muted);
 	--graph-node-unresolved: var(--text-faint);
 	--graph-node-focused: var(--text-accent);
@@ -413,7 +427,7 @@ body {
 	--modal-max-height: 1000px;
 	--modal-max-width-narrow: 800px;
 	--modal-border-width: var(--border-width);
-	--modal-border-color: var(--warm-grey, var(--background-modifier-border-focus));
+	--modal-border-color: var(--canvas-contrast-low, var(--background-modifier-border-focus));
 	--modal-radius: var(--radius-l);
 	--modal-community-sidebar-width: 280px;
 	/* Multi-select pills */
@@ -455,7 +469,7 @@ body {
 	--prompt-max-width: 80vw;
 	--prompt-max-height: 70vh;
 	--prompt-border-width: var(--border-width);
-	--prompt-border-color: var(--warm-grey, var(--background-modifier-border-focus));
+	--prompt-border-color: var(--canvas-contrast-low, var(--background-modifier-border-focus));
 	/* Radiuses */
 	--radius-s: 4px;
 	--radius-m: 8px;
@@ -501,7 +515,6 @@ body {
 	--slider-thumb-height: 18px;
 	--slider-thumb-width: 18px;
 	--slider-thumb-y: -6px;
-	--slider-thumb-radius: 50%;
 	--slider-s-thumb-size: 15px;
 	--slider-s-thumb-position: -5px;
 	--slider-track-background: var(--background-modifier-border);
@@ -541,12 +554,10 @@ body {
 	--tab-font-size: var(--font-ui-small);
 	--tab-font-weight: inherit;
 	--tab-container-background: var(--background-secondary);
-	--tab-divider-color: var(--background-modifier-border-hover);
+	--tab-divider-color: var(--divider-color);
 	--tab-outline-color: var(--divider-color);
 	--tab-outline-width: 1px;
 	--tab-curve: 6px;
-	--tab-radius: var(--radius-s);
-	--tab-radius-active: 6px 6px 0 0;
 	--tab-width: 200px;
 	--tab-max-width: 320px;
 	/* Stacked tabs */
@@ -563,14 +574,14 @@ body {
 	--table-border-width: 1px;
 	--table-border-color: var(--background-modifier-border);
 	--table-white-space: break-spaces;
-	--table-header-background: var(--table-background);
-	--table-header-background-hover: inherit;
+	--table-header-background: var(--canvas3);
+	--table-header-background-hover: var(--canvas3);
 	--table-header-border-width: var(--table-border-width);
 	--table-header-border-color: var(--table-border-color);
 	--table-header-font: inherit;
 	--table-header-size: var(--table-text-size);
 	--table-header-weight: var(--bold-weight);
-	--table-header-color: var(--text-normal);
+	--table-header-color: var(--color-accent);
 	--table-line-height: var(--line-height-tight);
 	--table-text-size: var(--font-text-size);
 	--table-text-color: inherit;
@@ -587,7 +598,7 @@ body {
 	--table-selection-blend-mode: var(--highlight-mix-blend-mode);
 	--table-selection-border-color: var(--interactive-accent);
 	--table-selection-border-width: 2px;
-	--table-selection-border-radius: 4px;
+	--table-selection-border-radius: 8px;
 	--table-cell-vertical-alignment: top;
 	--table-drag-handle-background: transparent;
 	--table-drag-handle-background-active: var(--table-selection-border-color);
@@ -622,9 +633,7 @@ body {
 	/* Toggles */
 	--toggle-border-width: 2px;
 	--toggle-width: 40px;
-	--toggle-radius: 18px;
 	--toggle-thumb-color: white;
-	--toggle-thumb-radius: 18px;
 	--toggle-thumb-height: 18px;
 	--toggle-thumb-width: 18px;
 	--toggle-s-border-width: 2px;
@@ -646,9 +655,9 @@ body {
 	/* Backgrounds */
 	--background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
 	--background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
-	--background-modifier-border: var(--dark3);
-	--background-modifier-border-hover: var(--warm-white);
-	--background-modifier-border-focus: var(--warm-grey);
+	--background-modifier-border: var(--canvas2);
+	--background-modifier-border-hover: var(--canvas-contrast-high);
+	--background-modifier-border-focus: var(--canvas-contrast-low);
 	--background-modifier-error-rgb: var(--color-red-rgb);
 	--background-modifier-error: var(--color-red);
 	--background-modifier-error-hover: var(--color-red);
@@ -656,7 +665,7 @@ body {
 	--background-modifier-success: var(--color-green);
 	--background-modifier-message: rgba(0, 0, 0, 0.9);
 	/* Inputs */
-	--background-modifier-form-field: var(--dark1);
+	--background-modifier-form-field: var(--canvas1);
 	/* Text */
 	--text-accent-hover: var(--color-accent-2);
 	--text-error: var(--color-red);
@@ -693,27 +702,29 @@ body {
     --color-pink: #fa99cd;
 
 	/* Macros */
-	--dark1: #121110;
-	--dark2: #232120;
-	--dark3: #181716;
-	--dark4: #403938;
-	--warm-grey: #807874;
-	--warm-light-grey: #989692;
-	--warm-white: #ffebd1;
+	--canvas1: #121110;
+	--canvas2: #232120;
+	--canvas3: #181716;
+	--canvas4: #403938;
+
+	--canvas-contrast-low: #807874;
+	--canvas-contrast-medium: #989692;
+	--canvas-contrast-high: #ffebd1;
+
 	--color-accent-1: #f85c51;
 	--color-accent-2: #a83e37;
 	/* --text-faint: #f85c51; */
 	--text-faint: var(--color-accent);
-    --text-muted: var(--warm-grey);
+    --text-muted: var(--canvas-contrast-low);
 	--text-accent: var(--color-accent);
 
-	--background-primary: var(--dark1);
-    --background-primary-alt: var(--dark2);
-    --background-code: var(--dark2);
-    --background-code-preview: var(--dark2);
-    --background-preview: var(--dark1);
-	--background-secondary: var(--dark3);
-    --background-secondary-alt: var(--dark3);
+	--background-primary: var(--canvas1);
+    --background-primary-alt: var(--canvas2);
+    --background-code: var(--canvas2);
+    --background-code-preview: var(--canvas2);
+    --background-preview: var(--canvas1);
+	--background-secondary: var(--canvas3);
+    --background-secondary-alt: var(--canvas3);
     --background-tag: #000000;
     --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
@@ -721,22 +732,22 @@ body {
 	--color-head:var(--color-accent);
 	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-	--menu-selection: var(--dark2);
-    --menu-selection-text: var(--warm-white);
-    --scrollbar-bg: var(--dark2);
-    --table-line: #e6e6e6;
+	--menu-selection: var(--canvas2);
+    --menu-selection-text: var(--canvas-contrast-high);
+    --scrollbar-bg: var(--canvas2);
+    --table-line: var(--canvas-contrast-low);
     --text-highlight-bg: var(--color-blue);
-    --text-normal: var(--warm-white);
-    --text-on-accent: var(--dark1);
-    --text-selection: var(--dark4);
+    --text-normal: var(--canvas-contrast-high);
+    --text-on-accent: var(--canvas1);
+    --text-selection: var(--canvas4);
     --text-tag:var(--color-green);
-    --background-quick: var(--dark2);
-    --file-hr: var(--dark2);
-    --leaf-handle: var(--dark2);
+    --background-quick: var(--canvas2);
+    --file-hr: var(--canvas2);
+    --leaf-handle: var(--canvas2);
 
 	/* --color-accent:var(--color-accent-1) */
 
-	--interactive-normal: var(--dark4);
+	--interactive-normal: var(--canvas4);
 	--interactive-hover: var(--color-accent-2);
     --interactive-accent: var(--color-accent);
     --interactive-accent-hover: var(--color-accent-2);
@@ -762,50 +773,52 @@ body {
     --color-pink: #fa99cd;
 
 	/* Macros */
-	--dark1: #fffefd;
-	--dark2: #d2cfce;
-	--dark3: #f5f3f0;
-	--dark4: #cfcdcc;
-	--warm-grey: #393838;
-	--warm-light-grey: #8b8988;
-	--warm-white: #121110;
+	--canvas1: #fffefd;
+	--canvas2: #d2cfce;
+	--canvas3: #f5f3f0;
+	--canvas4: #cfcdcc;
+
+	--canvas-contrast-low: #393838;
+	--canvas-contrast-medium: #8b8988;
+	--canvas-contrast-high: #121110;
+	
 	--color-accent-1: #f85c51;
 	--color-accent-2: #a83e37;
 	/* --text-faint: #f85c51; */
 	--text-faint: var(--color-accent);
-    --text-muted: var(--warm-grey);
+    --text-muted: var(--canvas-contrast-low);
 	--text-accent: var(--color-accent);
 
-	--background-primary: var(--dark1);
-    --background-primary-alt: var(--dark2);
-    --background-code: var(--dark2);
-    --background-code-preview: var(--dark2);
-    --background-preview: var(--dark1);
-	--background-secondary: var(--dark3);
-    --background-secondary-alt: var(--dark3);
+	--background-primary: var(--canvas1);
+    --background-primary-alt: var(--canvas2);
+    --background-code: var(--canvas2);
+    --background-code-preview: var(--canvas2);
+    --background-preview: var(--canvas1);
+	--background-secondary: var(--canvas3);
+    --background-secondary-alt: var(--canvas3);
     --background-tag: #000000;
     --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
 	/* Accent Colors */
-	--color-head:var(--warm-light-grey);
+	--color-head:var(--canvas-contrast-medium);
 	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-	--menu-selection: var(--dark2);
-    --menu-selection-text: var(--warm-white);
-    --scrollbar-bg: var(--dark2);
-    --table-line: #e6e6e6;
+	--menu-selection: var(--canvas2);
+    --menu-selection-text: var(--canvas-contrast-high);
+    --scrollbar-bg: var(--canvas2);
+    --table-line: var(--canvas-contrast-low);
     --text-highlight-bg: var(--color-blue);
-    --text-normal: var(--warm-white);
-    --text-on-accent: var(--dark1);
-    --text-selection: var(--dark4);
+    --text-normal: var(--canvas-contrast-high);
+    --text-on-accent: var(--canvas1);
+    --text-selection: var(--canvas4);
     --text-tag:var(--color-green);
-    --background-quick: var(--dark2);
-    --file-hr: var(--dark2);
-    --leaf-handle: var(--dark2);
+    --background-quick: var(--canvas2);
+    --file-hr: var(--canvas2);
+    --leaf-handle: var(--canvas2);
 
 	/* --color-accent:var(--color-accent-1) */
 
-	--interactive-normal: var(--dark4);
+	--interactive-normal: var(--canvas4);
 	--interactive-hover: var(--color-accent-2);
     --interactive-accent: var(--color-accent);
     --interactive-accent-hover: var(--color-accent-2);
