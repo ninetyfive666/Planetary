@@ -1,6 +1,6 @@
 # Planetary Theme
 
-![Thumbnail](thumbnail.jpg "Thumbnail")
+![Demo Image](demo.jpg "Demo Image")
 
 A sleek, dark AMOLED-friendly theme designed with an emphasis on warmth and seamless compatibility with user-defined accent colors.
 
