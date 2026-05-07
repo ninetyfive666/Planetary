@@ -391,7 +391,7 @@ body {
 	--list-bullet-transform: none;
 	--list-numbered-style: decimal;
 	/* File navigator */
-	--nav-item-size: var(--font-ui-small);
+	--nav-item-size: 14px;
 	--nav-item-color: var(--text-muted);
 	--nav-item-color-hover: var(--text-normal);
 	--nav-item-color-active: var(--text-normal);
@@ -418,7 +418,7 @@ body {
 	--nav-heading-color-collapsed-hover: var(--text-muted);
 	--nav-heading-weight: var(--font-medium);
 	--nav-heading-weight-hover: var(--font-medium);
-	/* File explorer navigation — bolder IBM Plex Sans */
+	/* File explorer navigation — bolder IBM Plex Serif */
 	--nav-item-font: 'IBM Plex Serif', serif;
 	--nav-item-weight: var(--font-semibold);
 	--nav-item-weight-hover: var(--font-semibold);
