@@ -43,9 +43,29 @@
 
 
 
+/* @settings
+name: Planetary
+id: planetary
+settings:
+    - id: body-font-select
+      title: Body Font
+      description: Switch between Serif and Sans-Serif
+      type: variable-select
+      default: "'IBM Plex Sans', sans-serif"
+      options:
+          - label: Sans Serif
+            value: "'IBM Plex Sans', sans-serif"
+          - label: Serif
+            value: "'IBM Plex Serif', serif"
+    - id: rainbow-headers
+      title: Rainbow Header Colors
+      description: Use vibrant palette colors for H1-H3 instead of primary accent variations
+      type: class-toggle
+*/
+
 :root {
-    --font-text-theme: 'IBM Plex Serif', serif;
-    --font-body-theme: 'IBM Plex Serif', serif;
+    --font-text-theme: 'IBM Plex Sans', sans-serif;
+    --font-body-theme: 'IBM Plex Sans', sans-serif;
     --font-monospace-theme: 'IBM Plex Mono', monospace;
 }
 
@@ -88,7 +108,7 @@ svg * {
   }
 
 body {
-	font-family: 'IBM Plex Serif', serif;
+	font-family: var(--body-font-select, 'IBM Plex Sans', sans-serif);
 	--tab-radius: 8px 8px 0 0;
 	--tab-radius-active: 8px 8px 0 0;
 	--checkbox-radius: var(--radius-s);
@@ -98,8 +118,8 @@ body {
 
 
 
-	--font-text-theme: IBM Plex Serif, serif;
-	--font-body-theme: IBM Plex Serif, serif;
+	--font-text-theme: var(--body-font-select, 'IBM Plex Sans', sans-serif);
+	--font-body-theme: var(--body-font-select, 'IBM Plex Sans', sans-serif);
 	/* Animations */
 	--anim-duration-none: 0;
 	--anim-duration-superfast: 70ms;
@@ -758,7 +778,7 @@ body {
 .nav-file-title,
 .nav-folder-title,
 .nav-folder-title-content {
-	font-family: 'IBM Plex Serif', serif;
+	font-family: var(--body-font-select, 'IBM Plex Sans', sans-serif);
 	font-weight: var(--font-semibold);
 }
 
@@ -828,10 +848,10 @@ body {
 	--color-green: #0cc77c;
 	--color-cyan-rgb: 14, 205, 201;
 	--color-cyan: #0ecdc9;
-	--color-blue-rgb: 214, 233, 255;
-	--color-blue: #d6e9ff;
-	--color-purple-rgb: 162, 155, 254;
-	--color-purple: #a29bfe;
+	--color-blue-rgb: 92, 168, 255;
+	--color-blue: #5ca8ff;
+	--color-purple-rgb: 139, 92, 246;
+	--color-purple: #8b5cf6;
 	--color-pink-rgb: 242, 44, 150;
 	--color-pink: #f22c96;
 
@@ -855,4 +875,15 @@ body {
 	--h4-color: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 6%));
 	--h5-color: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 8%));
 	--h6-color: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%));
+}
+
+/* Rainbow Headers Toggle — vibrant palette colors for all headings */
+.theme-dark.rainbow-headers,
+.theme-light.rainbow-headers {
+	--h1-color: var(--color-red);
+	--h2-color: var(--color-orange);
+	--h3-color: var(--color-green);
+	--h4-color: var(--color-cyan);
+	--h5-color: var(--color-blue);
+	--h6-color: var(--color-purple);
 }
