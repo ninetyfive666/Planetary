@@ -838,19 +838,19 @@ body {
 
 .theme-dark {
 	/* Palette colors - edit these to customize dark mode */
-	--color-red-rgb: 248, 92, 81;
+	--color-red-rgb: rgb(248, 92, 81);
 	--color-red: #f85c51;
-	--color-orange-rgb: 233, 151, 63;
+	--color-orange-rgb: rgb(233, 151, 63);
 	--color-orange: #e9973f;
-	--color-yellow-rgb: 224, 222, 113;
+	--color-yellow-rgb: rgb(224, 222, 113);
 	--color-yellow: #e0de71;
-	--color-green-rgb: 35, 209, 140;
+	--color-green-rgb: rgb(35, 209, 140);
 	--color-green: #23d18c;
-	--color-cyan-rgb: 10, 206, 203;
+	--color-cyan-rgb: rgb(10, 206, 203);
 	--color-cyan: #0acecb;
 	--color-blue-rgb: 105, 175, 255;
 	--color-blue: #69afff;
-	--color-purple-rgb: 162, 155, 254;
+	--color-purple-rgb: rgb(162, 155, 254);
 	--color-purple: #a29bfe;
 	--color-pink-rgb: 250, 153, 205;
 	--color-pink: #fa99cd;
@@ -899,19 +899,19 @@ body {
 
 .theme-light {
 	/* Palette colors - edit these to customize light mode */
-	--color-red-rgb: 248, 92, 81;
+	--color-red-rgb: rgb(248, 92, 81);
 	--color-red: #f85c51;
-	--color-orange-rgb: 233, 151, 63;
+	--color-orange-rgb: rgb(233, 151, 63);
 	--color-orange: #e9973f;
-	--color-yellow-rgb: 234, 207, 0;
+	--color-yellow-rgb: rgb(234, 207, 0);
 	--color-yellow: #eacf00;
-	--color-green-rgb: 12, 199, 124;
+	--color-green-rgb: rgb(12, 199, 124);
 	--color-green: #0cc77c;
-	--color-cyan-rgb: 14, 205, 201;
+	--color-cyan-rgb: rgb(14, 205, 201);
 	--color-cyan: #0ecdc9;
 	--color-blue-rgb: 92, 168, 255;
 	--color-blue: #5ca8ff;
-	--color-purple-rgb: 139, 92, 246;
+	--color-purple-rgb: rgb(139, 92, 246);
 	--color-purple: #8b5cf6;
 	--color-pink-rgb: 242, 44, 150;
 	--color-pink: #f22c96;
