@@ -8,7 +8,7 @@ A sleek, dual-mode Obsidian theme designed with an emphasis on warmth, vibrancy,
 
 - **Dark & Light Mode** — fully polished palettes for both environments, with carefully balanced contrast and warmth.
 - **Vibrant Callouts** — rich, legible callout colors even in light mode, with strong contrast between title and background.
-- **Rainbow Headers** — opt-in feature that paints every heading level in a different accent color from the theme palette (red → orange → green → cyan → blue → purple).
+- **Rainbow Headers** — opt-in feature that paints heading levels in vibrant colors from the theme palette, while H1 keeps your accent color (orange → green → cyan → blue → purple for H2–H6).
 - **Primary Font Switch** — choose between **IBM Plex Sans** (default) and **IBM Plex Serif** via the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin.
 - **AMOLED-Friendly Dark Mode** — deep, cozy blacks that are easy on the eyes.
 - **Custom Accent Color Support** — the theme harmonizes beautifully with your personal accent color settings in Obsidian.
@@ -23,11 +23,11 @@ Switch the editor body font between:
 - **Serif** — `IBM Plex Serif`
 
 ### Rainbow Header Colors
-Toggle on to replace the default accent-based headings with vibrant palette colors:
+Toggle on to replace the default accent-based headings with vibrant palette colors. H1 always keeps your accent color:
 
 | Heading | Color |
 |---|---|
-| H1 `#` | 🔴 Red |
+| H1 `#` | ✨ Accent color |
 | H2 `##` | 🟠 Orange |
 | H3 `###` | 🟢 Green |
 | H4 `####` | 🔵 Cyan |

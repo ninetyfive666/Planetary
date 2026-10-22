@@ -958,10 +958,9 @@ body {
 	);
 }
 
-/* Rainbow Headers Toggle — vibrant palette colors for all headings */
+/* Rainbow Headers Toggle — vibrant palette colors for headings (H1 stays accent) */
 .theme-dark.rainbow-headers,
 .theme-light.rainbow-headers {
-	--h1-color: var(--color-red);
 	--h2-color: var(--color-orange);
 	--h3-color: var(--color-green);
 	--h4-color: var(--color-cyan);
